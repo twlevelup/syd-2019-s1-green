@@ -1,6 +1,6 @@
 # LevelUp Watch Edition App Development Environment
 
-[![Build Status](https://circleci.com/gh/twlevelup/watch_edition.svg?style=svg)](https://circleci.com/gh/twlevelup/watch_edition)
+[![Build Status](https://circleci.com/gh/twlevelup/syd-2019-s1-green.svg?style=svg)](https://circleci.com/gh/twlevelup/syd-2019-s1-green)
 
 This git repo contains all the code you need to prototype apps for the watch.
 
