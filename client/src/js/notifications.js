@@ -11,6 +11,9 @@ const notifications = [
     type: "base",
     label: "Base",
     defaultValue: "This is a test base notification",
+  },
+  {
+    type: "Food Available"
   }
 ];
 
