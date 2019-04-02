@@ -21,12 +21,12 @@ describe('ContactsPage', () => {
     });
   });
 
-  describe('#leftButtonEvent', () => {
+  describe('#topButtonEvent', () => {
     it('goes to root page', () => {
       const page = new ContactsPage();
       spyOn(page, 'navigate');
 
-      page.leftButtonEvent();
+      page.topButtonEvent();
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });

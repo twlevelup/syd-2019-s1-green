@@ -47,6 +47,7 @@ class HomePage extends BasePage {
 
   leftButtonEvent() {
     AudioHub.playSound(plop);
+    
   }
 
   topButtonEvent() {

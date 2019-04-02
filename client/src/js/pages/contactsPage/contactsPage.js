@@ -8,7 +8,7 @@ class ContactsPage extends BasePage {
     this.contacts = StorageHub.getData('contacts')
   }
 
-  leftButtonEvent() {
+  topButtonEvent() {
     this.navigate('/');
   }
 }
