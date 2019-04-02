@@ -17,16 +17,13 @@ describe('TeamPage', () => {
       const page = new TeamPage();
 
       expect(page.render()).toContain("James");
+      expect(page.render()).toContain("Tony");
+      expect(page.render()).toContain("Herman");
+      expect(page.render()).toContain("Angela");
       expect(page.render()).toContain("Mitchell");
-    });
-    it('should render some team members names', () => {
-        const page = new TeamPage()
-        expect(page.render()).toContain('Theodore');
-        expect(page.render()).toContain('Lainmar');
-        expect(page.render()).toContain("Angela");
-        expect(page.render()).toContain("Bruce");
-        expect(page.render()).toContain('Theodore');
-        expect(page.render()).toContain('Lainmar');
+      expect(page.render()).toContain('Theodore');
+      expect(page.render()).toContain('Lainmar');
+      expect(page.render()).toContain("Bruce");
     });
   });
 });
