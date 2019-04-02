@@ -12,6 +12,7 @@ describe('TeamPage', () => {
       const page = new TeamPage();
       expect(page.render()).toContain("<h1>Made by:</h1>");
     });
+
     it('should contain team members names', () => {
       const page = new TeamPage();
 
@@ -19,9 +20,13 @@ describe('TeamPage', () => {
       expect(page.render()).toContain("Mitchell");
     });
     it('should render some team members names', () => {
-    const page = new TeamPage()
-    expect(page.render()).toContain('Theodore');
-    expect(page.render()).toContain('Lainmar');
-})
+        const page = new TeamPage()
+        expect(page.render()).toContain('Theodore');
+        expect(page.render()).toContain('Lainmar');
+        expect(page.render()).toContain("Angela");
+        expect(page.render()).toContain("Bruce");
+        expect(page.render()).toContain('Theodore');
+        expect(page.render()).toContain('Lainmar');
+    });
   });
 });
