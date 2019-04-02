@@ -18,4 +18,9 @@ describe('TeamPage', () => {
     });
   });
 
+    it('should render some team members names', () => {
+        const page = new TeamPage()
+        expect(page.render()).toContain('Theodore');
+        expect(page.render()).toContain('Lainmar');
+    })
 });
