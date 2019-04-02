@@ -34,13 +34,23 @@ describe('HomePage', () => {
     });
   });
 
+//   describe('#rightButtonEvent', () => {
+//     it('goes to contacts page', () => {
+//       const page = new HomePage();
+//       spyOn(page, 'navigate');
+
+//       page.rightButtonEvent();
+//       expect(page.navigate).toHaveBeenCalledWith('contacts');
+//     });
+//   });
+
   describe('#rightButtonEvent', () => {
-    it('goes to contacts page', () => {
+    it('goes to mealPlan page', () => {
       const page = new HomePage();
       spyOn(page, 'navigate');
 
       page.rightButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('contacts');
+      expect(page.navigate).toHaveBeenCalledWith('mealPlan');
     });
   });
 
