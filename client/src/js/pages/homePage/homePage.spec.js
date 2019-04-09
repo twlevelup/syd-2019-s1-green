@@ -16,7 +16,7 @@ describe('HomePage', () => {
       page.pageWillLoad();
       expect(StorageHub.setData).toBeCalledWith('contacts', expect.any(Array));
     })
-  })
+  });
 
   describe('#render', () => {
     it('should render my page correctly', () => {
@@ -25,24 +25,24 @@ describe('HomePage', () => {
     });
   });
 
+  // describe('#leftButtonEvent', () => {
+  //   it('audioHub plays a sound', () => {
+  //     spyOn(AudioHub, 'playSound')
+  //     const page = new HomePage();
+  //     page.leftButtonEvent();
+  //     expect(AudioHub.playSound).toBeCalledWith('./sounds/plop.mp3');
+  //   });
+  // });
+
   describe('#leftButtonEvent', () => {
-    it('audioHub plays a sound', () => {
-      spyOn(AudioHub, 'playSound')
+    it('goes to foodRecipe page', () => {
       const page = new HomePage();
+      spyOn(page, 'navigate');
+
       page.leftButtonEvent();
-      expect(AudioHub.playSound).toBeCalledWith('./sounds/plop.mp3');
+      expect(page.navigate).toHaveBeenCalledWith('foodRecipe');
     });
   });
-
-//   describe('#rightButtonEvent', () => {
-//     it('goes to contacts page', () => {
-//       const page = new HomePage();
-//       spyOn(page, 'navigate');
-
-//       page.rightButtonEvent();
-//       expect(page.navigate).toHaveBeenCalledWith('contacts');
-//     });
-//   });
 
   describe('#rightButtonEvent', () => {
     it('goes to mealPlan page', () => {

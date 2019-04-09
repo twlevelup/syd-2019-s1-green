@@ -1,6 +1,6 @@
-const MealPlanPage = require('./mealPlanPage');
+const FoodRecipe = require('./foodRecipe');
 
-describe('The Meal Plan Page', () => {
+describe('Food Recipe Page', () => {
   let watchFace;
   beforeEach(() => {
     document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
@@ -9,14 +9,14 @@ describe('The Meal Plan Page', () => {
 
   describe('#render', () => {
     it('should contain the correct text', () => {
-      const page = new MealPlanPage();
-      expect(page.render()).toContain('This is the meal plan page');
+      const page = new FoodRecipe();
+      expect(page.render()).toContain('This is the food recipe page');
     });
   });
 
    describe('#topButtonEvent', () => {
     it('goes to root page', () => {
-      const page = new MealPlanPage();
+      const page = new FoodRecipe();
       spyOn(page, 'navigate');
 
       page.topButtonEvent();

@@ -46,8 +46,8 @@ class HomePage extends BasePage {
   }
 
   leftButtonEvent() {
-    AudioHub.playSound(plop);
-    
+    // AudioHub.playSound(plop);
+    this.navigate('foodRecipe');
   }
 
   topButtonEvent() {
