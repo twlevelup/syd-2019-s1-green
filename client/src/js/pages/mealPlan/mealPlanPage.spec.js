@@ -1,4 +1,5 @@
 const MealPlanPage = require('./mealPlanPage');
+const StorageHub = require('watch-framework').StorageHub;
 
 describe('The Meal Plan Page', () => {
   let watchFace;
@@ -12,6 +13,57 @@ describe('The Meal Plan Page', () => {
       const page = new MealPlanPage();
       expect(page.render()).toContain('This is the meal plan page');
     });
+
+    it('should render my Pizza', () => {
+      const meals = [
+        { name: 'Pizza', id: '0' },
+        { name: 'Pasta', id: '1' },
+        { name: 'Salad', id: '2' },
+      ];
+      StorageHub.setData('meals', meals)
+      const page = new MealPlanPage();
+      page.pageWillLoad();
+      expect(page.render()).toContain("Pizza</span>");;
+    });
+
+    it('should render my Pasta', () => {
+      const meals = [
+        { name: 'Pizza', id: '0', selected: "selected" },
+        { name: 'Pasta', id: '1', selected: "notSelected" },
+        { name: 'Salad', id: '2', selected: "notSelected" },
+      ];
+      StorageHub.setData('meals', meals)
+      const page = new MealPlanPage();
+      page.pageWillLoad();
+      expect(page.render()).toContain("Pasta</span>");;
+    });
+
+    it('should render my in red Pizza', () => {
+      const meals = [
+        { name: 'Pizza', id: '0', selected: "selected" },
+        { name: 'Pasta', id: '1', selected: "notSelected" },
+        { name: 'Salad', id: '2', selected: "notSelected" },
+      ];
+      StorageHub.setData('meals', meals)
+      const page = new MealPlanPage();
+      page.pageWillLoad();
+      expect(page.render()).toContain('<span class=selected>Pizza</span>');
+    });
+
+    // TODO - working code
+    // it('Right button click should toggle css class first and second items', () => {
+    //   const meals = [
+    //     { name: 'Pizza', id: '0', selected: "selected" },
+    //     { name: 'Rice', id: '1', selected: "notSelected" },
+    //     { name: 'Salad', id: '2', selected: "notSelected" },
+    //   ];
+    //   StorageHub.setData('meals', meals)
+    //   const page = new MealPlanPage();
+    //   page.pageWillLoad();
+    //   page.rightButtonEvent();
+    //   expect(page.render()).toContain('<span class=notSelected>Pizza</span>');
+    //   expect(page.render()).toContain('<span class=selected>Rice</span>');
+    // });
   });
 
    describe('#topButtonEvent', () => {
