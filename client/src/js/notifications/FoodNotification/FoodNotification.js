@@ -7,4 +7,8 @@ module.exports = class FoodNotification extends BaseNotification {
     console.log("LEFT");
     NotificationHub.hide();
   }
+  faceButtonEvent() {
+    NotificationHub.hide()
+    this.navigate('foodInformation');
+  }
 };
