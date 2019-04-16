@@ -7,7 +7,7 @@ const FoodRecipe = require('./pages/foodRecipe/foodRecipe');
 const FoodInformation = require('./pages/foodInformation/FoodInformation');
 const GroceryDeliveryPage = require('./pages/groceryDelivery/groceryDeliveryPage');
 const DeliveryPage = require('./pages/deliveryPage/deliveryPage');
-
+const RecipeDetails = require('./pages/foodRecipe/recipeDetails/recipeDetails');
 
 module.exports = {
   '/': HomePage,
@@ -19,5 +19,6 @@ module.exports = {
   'foodInformation': FoodInformation,
   'groceryDelivery': GroceryDeliveryPage,
   'delivery': DeliveryPage,
-  'groceryDelivery': GroceryDeliveryPage
+  'groceryDelivery': GroceryDeliveryPage,
+  'recipeDetails': RecipeDetails
 };

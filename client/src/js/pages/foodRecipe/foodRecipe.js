@@ -6,6 +6,11 @@ class FoodRecipe extends BasePage {
   topButtonEvent() {
     this.navigate('/');
   }
+
+  leftButtonEvent() {
+    this.navigate('recipeDetails');
+  }
+
 }
 
 
