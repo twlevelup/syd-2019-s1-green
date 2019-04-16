@@ -42,7 +42,7 @@ class HomePage extends BasePage {
   }
 
   rightButtonEvent() {
-    this.navigate('mealPlan');
+    this.navigate('delivery');
   }
 
   leftButtonEvent() {

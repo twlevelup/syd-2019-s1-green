@@ -45,12 +45,12 @@ describe('HomePage', () => {
   });
 
   describe('#rightButtonEvent', () => {
-    it('goes to mealPlan page', () => {
+    it('goes to delivery page', () => {
       const page = new HomePage();
       spyOn(page, 'navigate');
 
       page.rightButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('mealPlan');
+      expect(page.navigate).toHaveBeenCalledWith('delivery');
     });
   });
 

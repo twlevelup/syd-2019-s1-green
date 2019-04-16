@@ -10,6 +10,6 @@ describe('routes', () => {
     expect(routes['mealPlan']).toBeDefined();
     expect(routes['foodRecipe']).toBeDefined();
     expect(routes['foodInformation']).toBeDefined();
+    expect(routes['delivery']).toBeDefined();
   });
-
 });
