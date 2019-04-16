@@ -7,3 +7,11 @@ StorageHub.setData('meals', [
   { name: 'Pasta', id: '1', selected: "notSelected" },
   { name: 'Salad', id: '2', selected: "notSelected" },
   ])
+
+
+StorageHub.setData('groceryBundle', [
+  {   
+    name: 'Healthly Dinner Pack',
+    contents: 'bag of salad, two tomatoes, one cucumber, three beef steaks' 
+  },
+])

@@ -67,12 +67,12 @@ describe('HomePage', () => {
   });
 
   describe('#topButtonEvent', () => {
-    it('scrolls page up', () => {
+    it('goes to groceryDelivery page', () => {
       const page = new HomePage({ watchFace });
+      spyOn(page, 'navigate');
 
       page.topButtonEvent();
-
-      expect(watchFace.scrollTop).toEqual(-40);
+      expect(page.navigate).toHaveBeenCalledWith('groceryDelivery');
     });
   });
 
