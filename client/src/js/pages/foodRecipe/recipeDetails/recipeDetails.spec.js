@@ -14,13 +14,17 @@ describe('Food Recipe Page', () => {
     });
   });
 
-   describe('#topButtonEvent', () => {
-    it('goes to root page', () => {
-      const page = new RecipeDetails();
-      spyOn(page, 'navigate');
 
-      page.topButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('/');
+  describe('#bottomButtonEvent', () => {
+    it('scrolls page down', () => {
+
+      const page = new RecipeDetails({ watchFace });
+
+      page.bottomButtonEvent();
+
+      expect(watchFace.scrollTop).toEqual(40);
+
     });
+
   });
   });
