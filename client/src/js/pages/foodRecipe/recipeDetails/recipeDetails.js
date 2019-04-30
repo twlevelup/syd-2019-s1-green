@@ -3,12 +3,12 @@ const BasePage = require('watch-framework').BasePage;
 class RecipeDetails extends BasePage {
   template = require('./recipeDetails.hbs');
 
-  topButtonEvent() {
+  rightButtonEvent() {
     this.navigate('/');
   }
 
   leftButtonEvent() {
-    this.navigate('/');
+    this.navigate('foodRecipe');
   }
 
   topButtonEvent() {

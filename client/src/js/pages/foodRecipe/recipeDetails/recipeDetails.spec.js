@@ -25,6 +25,28 @@ describe('Food Recipe Page', () => {
       expect(watchFace.scrollTop).toEqual(40);
 
     });
+  });
+
+    describe('#leftButtonEvent', () => {
+      it('left button goes back', () => {
+        const page = new RecipeDetails();
+        spyOn(page, 'navigate');
+
+      page.leftButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('foodRecipe');
+    });
+  });
+
+
+   describe('#rightButtonEvent', () => {
+    it('goes to home page', () => {
+      const page = new RecipeDetails();
+      spyOn(page, 'navigate');
+
+      page.rightButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
 
   });
-  });
+

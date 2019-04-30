@@ -14,13 +14,36 @@ describe('Food Recipe Page', () => {
     });
   });
 
-   describe('#topButtonEvent', () => {
+   describe('#rightButtonEvent', () => {
     it('goes to root page', () => {
       const page = new FoodRecipe();
       spyOn(page, 'navigate');
 
-      page.topButtonEvent();
+      page.rightButtonEvent();
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
+
+    describe('#leftButtonEvent', () => {
+      it('left button goes back', () => {
+        const page = new FoodRecipe();
+        spyOn(page, 'navigate');
+
+      page.leftButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
+
+
+   describe('#faceButtonEvent', () => {
+    it('goes to recipe details page', () => {
+      const page = new FoodRecipe();
+      spyOn(page, 'navigate');
+
+      page.faceButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('recipeDetails');
+    });
+  });
+
+
   });
