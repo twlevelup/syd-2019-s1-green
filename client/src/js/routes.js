@@ -1,6 +1,6 @@
 const HomePage = require('./pages/homePage/homePage');
 // const ContactsPage = require('./pages/contactsPage/contactsPage');
-const MealPlanPage = require('./pages/mealPlan/mealPlanPage');
+const MealListPage = require('./pages/mealList/mealListPage');
 const TeamPage = require('./pages/teamPage/teamPage');
 const FourOhFour = require('./pages/404Page/404Page');
 const FoodRecipe = require('./pages/foodRecipe/foodRecipe');
@@ -15,7 +15,7 @@ const FoodQuantity = require('./pages/foodQuantity/FoodQuantity');
 module.exports = {
   '/': HomePage,
 //   'contacts': ContactsPage,
-  'mealPlan': MealPlanPage,
+  'mealList': MealListPage,
   'team': TeamPage,
   '404': FourOhFour,
   'foodRecipe': FoodRecipe,

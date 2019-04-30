@@ -1,7 +1,7 @@
-const MealPlanPage = require('./mealPlanPage');
+const MealListPage = require('./mealListPage');
 const StorageHub = require('watch-framework').StorageHub;
 
-describe('The Meal Plan Page', () => {
+describe('The Meal list Page', () => {
   let watchFace;
   beforeEach(() => {
     document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
@@ -10,8 +10,8 @@ describe('The Meal Plan Page', () => {
 
   describe('#render', () => {
     it('should contain the correct text', () => {
-      const page = new MealPlanPage();
-      expect(page.render()).toContain('This is the meal plan page');
+      const page = new MealListPage();
+      expect(page.render()).toContain('This is the meal list page');
     });
 
     it('should render my Pizza', () => {
@@ -21,7 +21,7 @@ describe('The Meal Plan Page', () => {
         { name: 'Salad', id: '2' },
       ];
       StorageHub.setData('meals', meals)
-      const page = new MealPlanPage();
+      const page = new MealListPage();
       page.pageWillLoad();
       expect(page.render()).toContain("Pizza</span>");;
     });
@@ -33,7 +33,7 @@ describe('The Meal Plan Page', () => {
         { name: 'Salad', id: '2', selected: "notSelected" },
       ];
       StorageHub.setData('meals', meals)
-      const page = new MealPlanPage();
+      const page = new MealListPage();
       page.pageWillLoad();
       expect(page.render()).toContain("Pasta</span>");;
     });
@@ -45,7 +45,7 @@ describe('The Meal Plan Page', () => {
         { name: 'Salad', id: '2', selected: "notSelected" },
       ];
       StorageHub.setData('meals', meals)
-      const page = new MealPlanPage();
+      const page = new MealListPage();
       page.pageWillLoad();
       expect(page.render()).toContain('<span class=selected>Pizza</span>');
     });
@@ -58,7 +58,7 @@ describe('The Meal Plan Page', () => {
     //     { name: 'Salad', id: '2', selected: "notSelected" },
     //   ];
     //   StorageHub.setData('meals', meals)
-    //   const page = new MealPlanPage();
+    //   const page = new MealListPage();
     //   page.pageWillLoad();
     //   page.rightButtonEvent();
     //   expect(page.render()).toContain('<span class=notSelected>Pizza</span>');
@@ -68,7 +68,7 @@ describe('The Meal Plan Page', () => {
 
    describe('#topButtonEvent', () => {
     it('goes to root page', () => {
-      const page = new MealPlanPage();
+      const page = new MealListPage();
       spyOn(page, 'navigate');
 
       page.topButtonEvent();

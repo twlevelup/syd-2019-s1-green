@@ -7,7 +7,7 @@ describe('routes', () => {
     // expect(routes['contacts']).toBeDefined();
     expect(routes['team']).toBeDefined();
     expect(routes['404']).toBeDefined();
-    expect(routes['mealPlan']).toBeDefined();
+    expect(routes['mealList']).toBeDefined();
     expect(routes['foodRecipe']).toBeDefined();
     expect(routes['foodInformation']).toBeDefined();
     expect(routes['delivery']).toBeDefined();

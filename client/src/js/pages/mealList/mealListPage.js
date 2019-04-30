@@ -1,8 +1,8 @@
 const BasePage = require('watch-framework').BasePage;
 const StorageHub = require('watch-framework').StorageHub;
 
-class MealPlanPage extends BasePage {
-  template = require('./mealPlanPage.hbs');
+class MealListPage extends BasePage {
+  template = require('./mealListPage.hbs');
 
   topButtonEvent() {
     this.navigate('/');
@@ -31,6 +31,6 @@ class MealPlanPage extends BasePage {
 
 
 
-module.exports = MealPlanPage;
+module.exports = MealListPage;
 
 
