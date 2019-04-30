@@ -1,3 +1,7 @@
-p {
-color: white;
+.delivery {
+color: #FF69B4;
+position: absolute;
+top: 45%;
+left: 10%;
+font-weight: bold;
 }
