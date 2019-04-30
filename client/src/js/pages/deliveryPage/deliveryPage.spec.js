@@ -14,4 +14,14 @@ describe('The Delivery Page', () => {
         expect(page.render()).toContain('Food will be delivered at 6pm');
       });
     });
+
+    describe('#rightButtonEvent', () => {
+    it('goes to home page', () => {
+      const page = new DeliveryPage();
+      spyOn(page, 'navigate');
+
+      page.rightButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
 });
