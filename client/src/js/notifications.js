@@ -19,12 +19,7 @@ const notifications = [
     defaultValue: "Hi, there is leftover food nearby at location [XX]. Get in quick for a yummy meal!",
     view: FoodNotification,
   },
-  {
-    type: "foodAvailableBeta",
-    label: "Food Nearby Beta",
-    defaultValue: "Hi, there is leftover food nearby at location [XX]. Click right for Accept or Left for Decline. Up for Pause Notifications for 2hrs",
-    view: FoodNotification,
-  }
+
 ];
 
 
@@ -34,4 +29,4 @@ module.exports = notifications;
 
 // 1. Write a json file of restaurant addresses which the watch periodically reads from and checks if the web browser is within the location
 // 2. Create generic styles to import from for different pages (ie a style guide)
-// 3. 
+// 3.

@@ -10,3 +10,13 @@ describe("FoodInformation", () => {
     });
   });
 });
+
+   describe('#rightButtonEvent', () => {
+    it('goes to root page', () => {
+      const page = new FoodInformation();
+      spyOn(page, 'navigate');
+
+      page.rightButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
