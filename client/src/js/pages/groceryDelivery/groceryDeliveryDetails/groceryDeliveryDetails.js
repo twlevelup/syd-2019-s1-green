@@ -1,7 +1,7 @@
 const BasePage = require('watch-framework').BasePage;
 
-class DeliveryDetails extends BasePage {
-  template = require('./deliveryDetails.hbs');
+class GroceryDeliveryDetails extends BasePage {
+  template = require('./groceryDeliveryDetails.hbs');
 
   // topButtonEvent() {
   //   this.navigate('/');
@@ -23,4 +23,4 @@ class DeliveryDetails extends BasePage {
 
 
 
-module.exports = DeliveryDetails;
+module.exports = GroceryDeliveryDetails;

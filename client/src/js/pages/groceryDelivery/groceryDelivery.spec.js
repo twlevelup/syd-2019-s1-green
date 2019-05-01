@@ -1,7 +1,7 @@
-const groceryDeliveryPage = require('./groceryDeliveryPage');
+const groceryDelivery = require('./groceryDelivery');
 const StorageHub = require('watch-framework').StorageHub;
 
-describe('groceryDeliveryPage', () => {
+describe('groceryDelivery', () => {
   let watchFace;
   beforeEach(() => {
     document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
@@ -9,28 +9,54 @@ describe('groceryDeliveryPage', () => {
   });
 
   describe('#render', () => {
+    it('should render navigation', () => {
+      const page = new groceryDelivery();
+      // expect(page.render()).toContain("navTopIcon");
+      expect(page.render()).toContain("navRightIcon");
+      // expect(page.render()).toContain("navBottomIcon");
+      expect(page.render()).toContain("navLeftIcon");
+    });
+  });
+
+  describe('#render', () => {
     it('should render my with a specific grocery bundle', () => {
       const groceryBundle = [
-        {   
+        {
           name: 'Healthly Dinner Pack',
-          contents: 'bag of salad, two tomatoes, one cucumber, three beef steaks' 
+          contents: 'bag of salad, two tomatoes, one cucumber, three beef steaks'
         },
       ];
       StorageHub.setData('groceryBundle', groceryBundle)
-      const page = new groceryDeliveryPage();
+      const page = new groceryDelivery();
       page.pageWillLoad();
-      expect(page.render()).toContain('<h1>Grocery Bundles:</h1>');
+      expect(page.render()).toContain('Grocery Bundles');
       expect(page.render()).toContain('Healthly Dinner Pack:');
     });
   });
 
-  // describe('#topButtonEvent', () => {
-  //   it('goes to root page', () => {
-  //     const page = new groceryDeliveryPage();
-  //     spyOn(page, 'navigate');
+  describe('#buttons', () => {
+    it('right button goes to root page', () => {
+      const page = new groceryDelivery();
+      spyOn(page, 'navigate');
 
-  //     page.topButtonEvent();
-  //     expect(page.navigate).toHaveBeenCalledWith('/');
-  //   });
-  // });
+      page.rightButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+
+    it('left button goes to root page', () => {
+      const page = new groceryDelivery();
+      spyOn(page, 'navigate');
+
+      page.leftButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+
+    it('face button goes to root page', () => {
+      const page = new groceryDelivery();
+      spyOn(page, 'navigate');
+
+      page.faceButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('groceryDeliveryDetails');
+    });
+  });
 });

@@ -12,5 +12,6 @@ describe('routes', () => {
     expect(routes['foodInformation']).toBeDefined();
     expect(routes['delivery']).toBeDefined();
     expect(routes['groceryDelivery']).toBeDefined();
+    expect(routes['groceryDeliveryDetails']).toBeDefined();
   });
 });

@@ -21,10 +21,11 @@ describe('HomePage', () => {
   describe('#render', () => {
     it('should render home page correctly', () => {
       const page = new HomePage();
-      expect(page.render()).toContain("navTopIcon");
-      expect(page.render()).toContain("navRightIcon");
-      // expect(page.render()).toContain("navBottomIcon");
-      expect(page.render()).toContain("navLeftIcon");
+      expect(page.render()).toContain("home");
+      expect(page.render()).toContain("homeTopIcon");
+      expect(page.render()).toContain("homeRightIcon");
+      // expect(page.render()).toContain("homeBottomIcon");
+      expect(page.render()).toContain("homeLeftIcon");
     });
   });
 

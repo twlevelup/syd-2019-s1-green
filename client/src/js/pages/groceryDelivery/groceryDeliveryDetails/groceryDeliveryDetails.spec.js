@@ -1,4 +1,4 @@
-const DeliveryDetails = require('./deliveryDetails');
+const GroceryDeliveryDetails = require('./groceryDeliveryDetails');
 
 describe('Delivery Details Page', () => {
   let watchFace;
@@ -9,7 +9,7 @@ describe('Delivery Details Page', () => {
 
   describe('#render', () => {
     it('should contain the correct text', () => {
-      const page = new DeliveryDetails();
+      const page = new GroceryDeliveryDetails();
       expect(page.render()).toContain('Delivery Details');
     });
   });
@@ -18,7 +18,7 @@ describe('Delivery Details Page', () => {
 //   describe('#bottomButtonEvent', () => {
 //     it('scrolls page down', () => {
 
-//       const page = new DeliveryDetails({ watchFace });
+//       const page = new GroceryDeliveryDetails({ watchFace });
 
 //       page.bottomButtonEvent();
 

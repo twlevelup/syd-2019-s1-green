@@ -1,7 +1,17 @@
-/* Increase APP height */
+/* Increase watch-face size */
 #watch #watch-face {
-  height: 260px;
+  top: 15px;
+  left: 5px;
+  height: 250px;
+  width: 240px;
+  padding: 20px 20px 20px 30px;
   margin-top: -10px;
+}
+
+/* SPACING */
+#watch-face h1 {
+  margin: 0px;
+  font-size: 1.7em;
 }
 
 /* COLORS - Green Section from https://materializecss.com/color.html */
@@ -10,29 +20,56 @@
 }
 
 /* ICONS START */
+
+.homeIcon {
+  font-size: 30px;
+  position: absolute;
+  color: #fff;
+}
+
+#homeTopIcon {
+  left: 130px;
+  top: 0px;
+}
+
+#homeRightIcon {
+  right: 0px;
+  top: 125px;
+}
+
+#homeBottomIcon {
+  left: 130px;
+  bottom: 0px;
+}
+
+#homeLeftIcon {
+  left: 0px;
+  top: 125px;
+}
+
 .navIcon {
-  font-size: 26px;
+  font-size: 20px;
   position: absolute;
   color: #fff;
 }
 
 #navTopIcon {
-  left: 115px;
+  left: 135px;
   top: 0px;
 }
 
 #navRightIcon {
   right: 0px;
-  top: 110px;
+  top: 130px;
 }
 
 #navBottomIcon {
-  left: 115px;
+  left: 135px;
   bottom: 0px;
 }
 
 #navLeftIcon {
   left: 0px;
-  top: 110px;
+  top: 130px;
 }
 

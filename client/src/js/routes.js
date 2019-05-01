@@ -5,7 +5,8 @@ const TeamPage = require('./pages/teamPage/teamPage');
 const FourOhFour = require('./pages/404Page/404Page');
 const FoodRecipe = require('./pages/foodRecipe/foodRecipe');
 const FoodInformation = require('./pages/foodInformation/FoodInformation');
-const GroceryDeliveryPage = require('./pages/groceryDelivery/groceryDeliveryPage');
+const GroceryDelivery = require('./pages/groceryDelivery/groceryDelivery');
+const GroceryDeliveryDetails = require('./pages/groceryDelivery/groceryDeliveryDetails/groceryDeliveryDetails');
 const DeliveryPage = require('./pages/deliveryPage/deliveryPage');
 const RecipeDetails = require('./pages/foodRecipe/recipeDetails/recipeDetails');
 const FoodQuantity = require('./pages/foodQuantity/FoodQuantity');
@@ -20,9 +21,9 @@ module.exports = {
   '404': FourOhFour,
   'foodRecipe': FoodRecipe,
   'foodInformation': FoodInformation,
-  'groceryDelivery': GroceryDeliveryPage,
+  'groceryDelivery': GroceryDelivery,
+  'groceryDeliveryDetails': GroceryDeliveryDetails,
   'delivery': DeliveryPage,
-  'groceryDelivery': GroceryDeliveryPage,
   'recipeDetails': RecipeDetails,
   'foodQuantity': FoodQuantity
 };
