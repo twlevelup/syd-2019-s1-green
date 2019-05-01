@@ -9,19 +9,22 @@ describe('HomePage', () => {
     watchFace = document.getElementById('watch-face');
   });
 
-  describe('#pageWillLoad', () => {
-    it('should set contacts data on page load', () => {
-      spyOn(StorageHub, 'setData')
-      const page = new HomePage();
-      page.pageWillLoad();
-      expect(StorageHub.setData).toBeCalledWith('contacts', expect.any(Array));
-    })
-  });
+  // describe('#pageWillLoad', () => {
+  //   it('should set contacts data on page load', () => {
+  //     spyOn(StorageHub, 'setData')
+  //     const page = new HomePage();
+  //     page.pageWillLoad();
+  //     expect(StorageHub.setData).toBeCalledWith('contacts', expect.any(Array));
+  //   })
+  // });
 
   describe('#render', () => {
-    it('should render my page correctly', () => {
+    it('should render home page correctly', () => {
       const page = new HomePage();
-      expect(page.render()).toContain("<div>Hello, World!</div>");
+      expect(page.render()).toContain("navTopIcon");
+      expect(page.render()).toContain("navRightIcon");
+      // expect(page.render()).toContain("navBottomIcon");
+      expect(page.render()).toContain("navLeftIcon");
     });
   });
 

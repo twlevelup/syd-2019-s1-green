@@ -1,3 +1,23 @@
 #home {
-  font-style: italic;
+  text-align: center;
+  margin-top: 90px;
+}
+
+#background {
+  position: absolute;
+  z-index: -1;
+  width: 259px;
+  height: 259px;
+  top: 0px;
+  left: 0px;
+  background-image: linear-gradient(to bottom, #1b5e20, #27712b, #338537, #3f9a43, #4caf50);
+  border-radius: 50%
+}
+
+#clock-time {
+  font-size: 30px;
+}
+
+#clock-date {
+  font-size: 15px;
 }

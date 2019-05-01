@@ -1,0 +1,38 @@
+/* Increase APP height */
+#watch #watch-face {
+  height: 260px;
+  margin-top: -10px;
+}
+
+/* COLORS - Green Section from https://materializecss.com/color.html */
+#watch-face {
+    color: #c8e6c9;
+}
+
+/* ICONS START */
+.navIcon {
+  font-size: 26px;
+  position: absolute;
+  color: #fff;
+}
+
+#navTopIcon {
+  left: 115px;
+  top: 0px;
+}
+
+#navRightIcon {
+  right: 0px;
+  top: 110px;
+}
+
+#navBottomIcon {
+  left: 115px;
+  bottom: 0px;
+}
+
+#navLeftIcon {
+  left: 0px;
+  top: 110px;
+}
+

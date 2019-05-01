@@ -1,3 +1,4 @@
+@import './styles/pages/generic.css';
 @import './styles/pages/home.css';
 @import './styles/pages/mealList.css';
 @import './styles/pages/delivery.css';
