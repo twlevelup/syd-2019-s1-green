@@ -9,7 +9,6 @@ describe("FoodInformation", () => {
       expect(page.render()).toContain("Chicken Pesto Pasta");
     });
   });
-});
 
    describe('#rightButtonEvent', () => {
     it('goes to root page', () => {
@@ -20,3 +19,14 @@ describe("FoodInformation", () => {
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
+
+  describe('#faceButtonEvent', () => {
+    it('goes to foodQuantity page', () => {
+      const page = new FoodInformation();
+      spyOn(page, 'navigate');
+
+      page.faceButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('foodQuantity');
+    });
+  });
+});
