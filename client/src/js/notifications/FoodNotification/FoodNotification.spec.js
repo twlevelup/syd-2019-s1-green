@@ -9,7 +9,8 @@ describe("FoodNotification", () => {
       expect(notification.render()).toContain("Food Available");
     });
   });
-    describe("#faceButtonPress", () => {
+
+  describe("#faceButtonPress", () => {
     it("should bring user to a more detailed page of food available", () => {
       const page = new FoodNotification();
       spyOn(page, 'navigate');
