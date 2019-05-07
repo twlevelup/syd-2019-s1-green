@@ -73,3 +73,36 @@
   top: 130px;
 }
 
+/* Font Class */
+.headers {
+  font-style:normal;
+  font-weight:bolder;
+  font-size: 15px;
+
+}
+
+.allergens {
+  font-style:normal;
+  font-size: 10px;
+
+}
+
+.selectedRecipe {
+  font-style:normal;
+  font-size: 15px;
+  text-align: center;
+  /* height: 250px;
+  line-height: 200px; */
+  margin: 85px 20px;
+  border: 2px solid rgba(7, 170, 29, 0.658);
+}
+
+.selectedBundle {
+  font-style:normal;
+  font-size: 10px;
+  text-align: left;
+  /* height: 250px;
+  line-height: 200px; */
+  /* margin: 85px 20px;
+  border: 2px solid rgba(7, 170, 29, 0.658); */
+}

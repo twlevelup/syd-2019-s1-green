@@ -8,9 +8,19 @@ describe('Food Recipe Page', () => {
   });
 
   describe('#render', () => {
-    it('should contain the correct text', () => {
+    it('should contain the header text', () => {
       const page = new FoodRecipe();
-      expect(page.render()).toContain('This is the food recipe page');
+      expect(page.render()).toContain('Food Recipe');
+    });
+
+    it('should contain the recipe text', () => {
+      const page = new FoodRecipe();
+      expect(page.render()).toContain('Cheese Cake');
+    });
+
+    it('should contain selected recipe styling', () => {
+      const page = new FoodRecipe();
+      expect(page.render()).toContain('selectedRecipe');
     });
   });
 

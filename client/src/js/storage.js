@@ -9,7 +9,11 @@ StorageHub.setData('meals', [
 
 StorageHub.setData('groceryBundle', [
   {
-    name: 'Healthly Dinner Pack',
+    name: 'Healthy Dinner Pack',
     contents: 'bag of salad, two tomatoes, one cucumber, three beef steaks'
+  },
+  {
+    name: 'Fun time Dinner Pack',
+    contents: 'bag of chips, two burgers, one coke, three ice-creams'
   },
 ])

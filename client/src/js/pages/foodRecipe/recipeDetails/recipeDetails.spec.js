@@ -7,12 +7,12 @@ describe('Food Recipe Page', () => {
     watchFace = document.getElementById('watch-face');
   });
 
-  describe('#render', () => {
-    it('should contain the correct text', () => {
-      const page = new RecipeDetails();
-      expect(page.render()).toContain('Recipe Details');
-    });
-  });
+  // describe('#render', () => {
+  //   it('should contain the correct text', () => {
+  //     const page = new RecipeDetails();
+  //     expect(page.render()).toContain('Recipe Details');
+  //   });
+  // });
 
 
   describe('#bottomButtonEvent', () => {
@@ -45,6 +45,13 @@ describe('Food Recipe Page', () => {
 
       page.rightButtonEvent();
       expect(page.navigate).toHaveBeenCalledWith('/');
+    });
+  });
+
+   describe('#Allergens&DietaryRequirements', () => {
+    it('contains dietary requirements', () => {
+      const page = new RecipeDetails();
+      expect(page.render()).toContain('Allergens/Dietary');
     });
   });
 

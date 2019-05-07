@@ -1,6 +1,6 @@
 #home {
   text-align: center;
-  margin-top: 90px;
+  margin-top: 115px;
 }
 
 /* Circle Background */
@@ -22,8 +22,12 @@
   border-radius: 4em;
 }
 
+p {
+    margin: 0px;
+}
+
 #clock-time {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 #clock-date {
