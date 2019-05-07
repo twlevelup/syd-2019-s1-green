@@ -1,12 +1,12 @@
-const BasePage = require('watch-framework').BasePage;
-const StorageHub = require('watch-framework').StorageHub;
-const AudioHub = require('watch-framework').AudioHub;
-const logo = require('../../../images/logo.png');
-const plop = './sounds/plop.mp3';
+const BasePage = require("watch-framework").BasePage;
+const StorageHub = require("watch-framework").StorageHub;
+const AudioHub = require("watch-framework").AudioHub;
+// const logo = require('../../../images/logo.png');
+const plop = "./sounds/plop.mp3";
 
 //test for raspberrypi
 class HomePage extends BasePage {
-  template = require('./homePage.hbs');
+  template = require("./homePage.hbs");
 
   pageWillLoad() {
     // StorageHub.setData('contacts', [
@@ -19,14 +19,14 @@ class HomePage extends BasePage {
     const dateTime = this.getDateTime();
     this.date = dateTime.date;
     this.time = dateTime.time;
-    this.logo = logo;
+    // this.logo = logo;
   }
 
   getDateTime() {
-    const dateTime = new Date(Date.now()).toLocaleString('en-AU').split(",");
+    const dateTime = new Date(Date.now()).toLocaleString("en-AU").split(",");
     return {
       date: dateTime[0],
-      time: dateTime[1],
+      time: dateTime[1]
     };
   }
 
@@ -42,16 +42,16 @@ class HomePage extends BasePage {
   }
 
   rightButtonEvent() {
-    this.navigate('delivery');
+    this.navigate("delivery");
   }
 
   leftButtonEvent() {
     // AudioHub.playSound(plop);
-    this.navigate('foodRecipe');
+    this.navigate("foodRecipe");
   }
 
   topButtonEvent() {
-    this.navigate('groceryDelivery');
+    this.navigate("groceryDelivery");
   }
 
   bottomButtonEvent() {
