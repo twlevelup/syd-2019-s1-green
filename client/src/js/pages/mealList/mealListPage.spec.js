@@ -18,7 +18,7 @@ describe('The Meal list Page', () => {
       StorageHub.setData('meals', meals)
       const page = new MealListPage();
       page.pageWillLoad();
-      expect(page.render()).toContain('<ul>');
+      expect(page.render()).toContain('<ul');
     });
 
     it('should render my Pizza', () => {
