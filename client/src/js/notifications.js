@@ -16,7 +16,7 @@ const notifications = [
   {
     type: "foodAvailable",
     label: "Food Nearby",
-    defaultValue: "Hi, there is leftover food nearby at location [XX]. Get in quick for a yummy meal! Press any button except the face to cancel.",
+    defaultValue: "foo bar",
     view: FoodNotification,
   },
 
