@@ -9,9 +9,16 @@ describe('The Meal list Page', () => {
   });
 
   describe('#render', () => {
-    it('should contain the correct text', () => {
+    it('should render an unordered list', () => {
+      const meals = [
+        { name: 'Pizza', id: '0', selected: "selected", diet: "Contains dairy" },
+        { name: 'Pasta', id: '1', selected: "notSelected", diet: "Contains dairy" },
+        { name: 'Salad', id: '2', selected: "notSelected", diet: "Contains dairy" },
+      ];
+      StorageHub.setData('meals', meals)
       const page = new MealListPage();
-      expect(page.render()).toContain('This is the meal list page');
+      page.pageWillLoad();
+      expect(page.render()).toContain('<ul>');
     });
 
     it('should render my Pizza', () => {
@@ -26,7 +33,7 @@ describe('The Meal list Page', () => {
       expect(page.render()).toContain("Pizza</span>");;
     });
 
-    it('should render my Pasta', () => {
+    it('should have Pizza selected', () => {
       const meals = [
         { name: 'Pizza', id: '0', selected: "selected" },
         { name: 'Pasta', id: '1', selected: "notSelected" },
@@ -35,19 +42,7 @@ describe('The Meal list Page', () => {
       StorageHub.setData('meals', meals)
       const page = new MealListPage();
       page.pageWillLoad();
-      expect(page.render()).toContain("Pasta</span>");;
-    });
-
-    it('should render my in red Pizza', () => {
-      const meals = [
-        { name: 'Pizza', id: '0', selected: "selected" },
-        { name: 'Pasta', id: '1', selected: "notSelected" },
-        { name: 'Salad', id: '2', selected: "notSelected" },
-      ];
-      StorageHub.setData('meals', meals)
-      const page = new MealListPage();
-      page.pageWillLoad();
-      expect(page.render()).toContain('<span class=selected>Pizza</span>');
+      expect(page.render()).toContain('<li class=selected>');
     });
 
     // TODO - working code
@@ -66,13 +61,35 @@ describe('The Meal list Page', () => {
     // });
   });
 
-   describe('#topButtonEvent', () => {
+   describe('#leftButtonEvent', () => {
     it('goes to root page', () => {
       const page = new MealListPage();
       spyOn(page, 'navigate');
 
-      page.topButtonEvent();
+      page.leftButtonEvent();
       expect(page.navigate).toHaveBeenCalledWith('/');
     });
   });
+
+   describe('#rightButtonEvent', () => {
+    it('goes to root page', () => {
+      const page = new MealListPage();
+      spyOn(page, 'navigate');
+
+      page.rightButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('/');
+    });
   });
+
+  describe('#faceButtonEvent', () => {
+    it('goes to delivery page', () => {
+      const page = new MealListPage();
+      spyOn(page, 'navigate');
+
+      page.faceButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('delivery');
+    });
+  });
+
+
+});

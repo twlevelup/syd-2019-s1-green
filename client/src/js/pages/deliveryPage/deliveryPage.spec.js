@@ -11,7 +11,7 @@ describe('The Delivery Page', () => {
     describe('#render', () => {
       it('should contain the correct text', () => {
         const page = new DeliveryPage();
-        expect(page.render()).toContain('Food will be delivered at 6pm');
+        expect(page.render()).toContain('You have placed your order.');
       });
     });
 

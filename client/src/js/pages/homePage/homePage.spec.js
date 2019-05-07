@@ -49,12 +49,12 @@ describe('HomePage', () => {
   });
 
   describe('#rightButtonEvent', () => {
-    it('goes to delivery page', () => {
+    it('goes to meal list page', () => {
       const page = new HomePage();
       spyOn(page, 'navigate');
 
       page.rightButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('delivery');
+      expect(page.navigate).toHaveBeenCalledWith('mealList');
     });
   });
 

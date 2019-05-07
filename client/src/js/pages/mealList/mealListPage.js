@@ -4,28 +4,22 @@ const StorageHub = require('watch-framework').StorageHub;
 class MealListPage extends BasePage {
   template = require('./mealListPage.hbs');
 
-  topButtonEvent() {
+  leftButtonEvent() {
     this.navigate('/');
   }
-    pageWillLoad() {
-      this.meals = StorageHub.getData('meals');
-    }
 
-    rightButtonEvent() {
-      let current = 99999;
-      let meals = StorageHub.getData('meals');
+  rightButtonEvent() {
+    this.navigate('/');
+  }
 
-      meals.forEach(function (meal) {
-        if (meal.selected == "selected") {
-            current = meal.id;
-            // meal.selected.setData("unselected");
-            meal.selected = "notSelected";
-            console.log(meals)
-            // TODO select next item
-            // meals[current+1].selected = "selected";
-        }
-      });
-    }
+  faceButtonEvent(){
+    this.navigate('delivery');
+  }
+
+  pageWillLoad() {
+    this.meals = StorageHub.getData('meals');
+  }
+
 
 }
 

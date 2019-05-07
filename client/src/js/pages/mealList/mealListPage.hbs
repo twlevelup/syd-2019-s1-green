@@ -1,8 +1,8 @@
-<p>This is the meal list page</p>
 <ul>
   {{#each meals}}
-    <li>
-      <span class={{this.selected}}>{{this.name}}</span>
+    <li class={{this.selected}}>
+      <span>{{this.name}}</span><br>
+      <span>{{this.diet}}</span>
     </li>
   {{/each}}
 </ul>
