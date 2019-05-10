@@ -1,12 +1,12 @@
-const HomePage = require('./homePage');
-const StorageHub = require('watch-framework').StorageHub;
-const AudioHub = require('watch-framework').AudioHub;
+const HomePage = require("./homePage");
+// const StorageHub = require("watch-framework").StorageHub;
+// const AudioHub = require("watch-framework").AudioHub;
 
-describe('HomePage', () => {
+describe("HomePage", () => {
   let watchFace;
   beforeEach(() => {
     document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
-    watchFace = document.getElementById('watch-face');
+    watchFace = document.getElementById("watch-face");
   });
 
   // describe('#pageWillLoad', () => {
@@ -18,8 +18,8 @@ describe('HomePage', () => {
   //   })
   // });
 
-  describe('#render', () => {
-    it('should render home page correctly', () => {
+  describe("#render", () => {
+    it("should render home page correctly", () => {
       const page = new HomePage();
       expect(page.render()).toContain("home");
       expect(page.render()).toContain("homeTopIcon");
@@ -38,75 +38,72 @@ describe('HomePage', () => {
   //   });
   // });
 
-  describe('#leftButtonEvent', () => {
-    it('goes to foodRecipe page', () => {
+  describe("#leftButtonEvent", () => {
+    it("goes to foodRecipe page", () => {
       const page = new HomePage();
-      spyOn(page, 'navigate');
+      spyOn(page, "navigate");
 
       page.leftButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('foodRecipe');
+      expect(page.navigate).toHaveBeenCalledWith("foodRecipe");
     });
   });
 
-  describe('#rightButtonEvent', () => {
-    it('goes to meal list page', () => {
+  describe("#rightButtonEvent", () => {
+    it("goes to meal list page", () => {
       const page = new HomePage();
-      spyOn(page, 'navigate');
+      spyOn(page, "navigate");
 
       page.rightButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('mealList');
+      expect(page.navigate).toHaveBeenCalledWith("mealList");
     });
   });
 
-  describe('#bottomButtonEvent', () => {
-    it('scrolls page down', () => {
+  // describe('#bottomButtonEvent', () => {
+  //   it('scrolls page down', () => {
+  //     const page = new HomePage({ watchFace });
+  //     page.bottomButtonEvent();
+  //     expect(watchFace.scrollTop).toEqual(40);
 
+  //   });
+  // });
+
+  describe("#topButtonEvent", () => {
+    it("goes to groceryDelivery page", () => {
       const page = new HomePage({ watchFace });
-
-      page.bottomButtonEvent();
-
-      expect(watchFace.scrollTop).toEqual(40);
-
-    });
-  });
-
-  describe('#topButtonEvent', () => {
-    it('goes to groceryDelivery page', () => {
-      const page = new HomePage({ watchFace });
-      spyOn(page, 'navigate');
+      spyOn(page, "navigate");
 
       page.topButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('groceryDelivery');
+      expect(page.navigate).toHaveBeenCalledWith("groceryDelivery");
     });
   });
 
-  describe('#updateTimeDisplay', () => {
-    it('updateTimeDisplays calls clock-time if its in the window', () => {
+  describe("#updateTimeDisplay", () => {
+    it("updateTimeDisplays calls clock-time if its in the window", () => {
       const page = new HomePage();
 
       watchFace.innerHTML = page.render();
 
-      jest.spyOn(page,"getDateTime");
+      jest.spyOn(page, "getDateTime");
       page.updateTimeDisplay(page.getDateTime);
       expect(page.getDateTime).toHaveBeenCalledTimes(1);
     });
   });
 
-  describe('#updateTimeDisplay', () => {
-    it('updateTimeDisplays does not call clock-time if its not in the window', () => {
+  describe("#updateTimeDisplay", () => {
+    it("updateTimeDisplays does not call clock-time if its not in the window", () => {
       const page = new HomePage();
 
-      jest.spyOn(page,"getDateTime");
+      jest.spyOn(page, "getDateTime");
       page.updateTimeDisplay(page.getDateTime);
       expect(page.getDateTime).toHaveBeenCalledTimes(0);
     });
   });
 
-  describe('#updateTimeEverySecond', () => {
-    it('update time display gets called three times in 3000 ms', () => {
+  describe("#updateTimeEverySecond", () => {
+    it("update time display gets called three times in 3000 ms", () => {
       const page = new HomePage();
 
-      spyOn(page, 'updateTimeDisplay');
+      spyOn(page, "updateTimeDisplay");
 
       jest.useFakeTimers();
       page.updateTimeEverySecond();

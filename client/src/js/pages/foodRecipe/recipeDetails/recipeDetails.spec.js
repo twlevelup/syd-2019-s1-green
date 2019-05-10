@@ -1,10 +1,10 @@
-const RecipeDetails = require('./recipeDetails');
+const RecipeDetails = require("./recipeDetails");
 
-describe('Food Recipe Page', () => {
+describe("Food Recipe Page", () => {
   let watchFace;
   beforeEach(() => {
     document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
-    watchFace = document.getElementById('watch-face');
+    watchFace = document.getElementById("watch-face");
   });
 
   // describe('#render', () => {
@@ -14,46 +14,38 @@ describe('Food Recipe Page', () => {
   //   });
   // });
 
+  // describe("#bottomButtonEvent", () => {
+  //   it("scrolls page down", () => {
+  //     const page = new RecipeDetails({ watchFace });
+  //     page.bottomButtonEvent();
+  //     expect(watchFace.scrollTop).toEqual(40);
+  //   });
+  // });
 
-  describe('#bottomButtonEvent', () => {
-    it('scrolls page down', () => {
-
-      const page = new RecipeDetails({ watchFace });
-
-      page.bottomButtonEvent();
-
-      expect(watchFace.scrollTop).toEqual(40);
-
-    });
-  });
-
-    describe('#leftButtonEvent', () => {
-      it('left button goes back', () => {
-        const page = new RecipeDetails();
-        spyOn(page, 'navigate');
+  describe("#leftButtonEvent", () => {
+    it("left button goes back", () => {
+      const page = new RecipeDetails();
+      spyOn(page, "navigate");
 
       page.leftButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('foodRecipe');
+      expect(page.navigate).toHaveBeenCalledWith("foodRecipe");
     });
   });
 
-
-   describe('#rightButtonEvent', () => {
-    it('goes to home page', () => {
+  describe("#rightButtonEvent", () => {
+    it("goes to home page", () => {
       const page = new RecipeDetails();
-      spyOn(page, 'navigate');
+      spyOn(page, "navigate");
 
       page.rightButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('/');
+      expect(page.navigate).toHaveBeenCalledWith("/");
     });
   });
 
-   describe('#Allergens&DietaryRequirements', () => {
-    it('contains dietary requirements', () => {
+  describe("#Allergens&DietaryRequirements", () => {
+    it("contains dietary requirements", () => {
       const page = new RecipeDetails();
-      expect(page.render()).toContain('Allergens/Dietary');
+      expect(page.render()).toContain("Allergens/Dietary");
     });
   });
-
-  });
-
+});

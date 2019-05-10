@@ -1,10 +1,9 @@
 const BasePage = require("watch-framework").BasePage;
-const StorageHub = require("watch-framework").StorageHub;
-const AudioHub = require("watch-framework").AudioHub;
+// const StorageHub = require("watch-framework").StorageHub;
+// const AudioHub = require("watch-framework").AudioHub;
 // const logo = require('../../../images/logo.png');
-const plop = "./sounds/plop.mp3";
+// const plop = "./sounds/plop.mp3";
 
-//test for raspberrypi
 class HomePage extends BasePage {
   template = require("./homePage.hbs");
 
@@ -42,7 +41,7 @@ class HomePage extends BasePage {
   }
 
   rightButtonEvent() {
-    this.navigate('mealList');
+    this.navigate("mealList");
   }
 
   leftButtonEvent() {
@@ -54,9 +53,10 @@ class HomePage extends BasePage {
     this.navigate("groceryDelivery");
   }
 
-  bottomButtonEvent() {
-    this.watchFace.scrollTop += 40;
-  }
+  // TODO: Remove with? an info page?
+  // bottomButtonEvent() {
+  //   this.watchFace.scrollTop += 40;
+  // }
 }
 
 module.exports = HomePage;

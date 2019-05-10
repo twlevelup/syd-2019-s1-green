@@ -3,8 +3,8 @@
   top: 15px;
   left: 5px;
   height: 250px;
-  width: 240px;
-  padding: 20px 20px 20px 30px;
+  width: 230px;
+  padding: 20px 30px;
   margin-top: -10px;
 }
 
@@ -15,8 +15,8 @@
 }
 
 /* COLORS - Green Section from https://materializecss.com/color.html */
-#watch-face {
-    color: #c8e6c9;
+#watch #watch-face {
+  color: #c8e6c9;
 }
 
 /* ICONS START */
@@ -47,6 +47,7 @@
   top: 125px;
 }
 
+/* TODO: fix positioning of icon when there is scrolling */
 .navIcon {
   font-size: 20px;
   position: absolute;
@@ -74,35 +75,39 @@
 }
 
 /* Font Class */
-.headers {
-  font-style:normal;
-  font-weight:bolder;
-  font-size: 15px;
 
+.headers {
+  font-style: normal;
+  font-weight: bolder;
+  font-size: 15px;
 }
 
 .allergens {
-  font-style:normal;
+  font-style: normal;
   font-size: 10px;
+}
 
+/* TODO standard styling of list items and selected list item */
+li {
+  padding: 2px 0px;
+  border-bottom: 1px solid #c8e6c9;
+}
+
+li:last-child {
+  border: none;
 }
 
 .selectedRecipe {
-  font-style:normal;
+  font-style: normal;
   font-size: 15px;
   text-align: center;
   /* height: 250px;
   line-height: 200px; */
   margin: 85px 20px;
-  border: 2px solid rgba(7, 170, 29, 0.658);
+  border: 1px solid #c8e6c9;
 }
 
 .selectedBundle {
-  font-style:normal;
-  font-size: 10px;
-  text-align: left;
-  /* height: 250px;
-  line-height: 200px; */
-  /* margin: 85px 20px;
-  border: 2px solid rgba(7, 170, 29, 0.658); */
+  font-size: 14px;
+  color: #a8e2aa;
 }
