@@ -20,3 +20,16 @@ StorageHub.setData("groceryBundle", [
     contents: "purple cabbage, spinach, sweet potatoes, tofu"
   }
 ]);
+
+
+StorageHub.setData("timeFrames", [
+  {
+    time: "6 AM - 10 AM"
+  },
+  {
+    time: "12 PM - 4 PM"
+  },
+  {
+    time: "6 PM - 10 PM"
+  }
+]);

@@ -12,7 +12,7 @@ const RecipeDetails = require('./pages/foodRecipe/recipeDetails/recipeDetails');
 const FoodQuantity = require('./pages/foodQuantity/FoodQuantity');
 const MealQuantity = require('./pages/mealQuantity/mealQuantity');
 const NutritionTracker = require('./pages/nutritionTracker/nutritionTracker');
-
+const TimeSelection = require('./pages/timeSelection/timeSelection');
 
 
 
@@ -30,4 +30,5 @@ module.exports = {
   'foodQuantity': FoodQuantity,
   'mealQuantity' : MealQuantity,
   'nutritionTracker': NutritionTracker,
+  'timeSelection' : TimeSelection
 };

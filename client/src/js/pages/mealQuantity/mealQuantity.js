@@ -4,12 +4,16 @@ class FoodQuantity extends BasePage {
   template = require('./mealQuantity.hbs');
   quantity = 0;
 
+  leftButtonEvent() {
+    this.navigate('mealList');
+  }
+
   rightButtonEvent() {
     this.navigate('/');
   }
 
   faceButtonEvent() {
-    this.navigate('delivery');
+    this.navigate('timeSelection');
   }
 
   topButtonEvent() {

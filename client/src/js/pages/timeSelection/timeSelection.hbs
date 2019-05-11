@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<i id="navRightIcon" class="navIcon fas fa-home"></i>
+<i id="navLeftIcon" class="navIcon fas fa-undo"></i>
+
+<p class="headers">Select Time Frame:</p>
+
+<ul style="margin: 60px 0px;" id="groceryBundleList">
+    {{#each timeFrames}}
+        {{#if this.selected}}
+            <li class="selectionItems selectedItem">{{this.time}}</li>
+        {{else}}
+            <li class="selectionItems">{{this.time}}</li>
+        {{/if}}
+    {{/each}}
+</ul>

@@ -33,17 +33,17 @@ describe('The Meal list Page', () => {
       expect(page.render()).toContain("Pizza</span>");;
     });
 
-    it('should have Pizza selected', () => {
-      const meals = [
-        { name: 'Pizza', id: '0', selected: "selected" },
-        { name: 'Pasta', id: '1', selected: "notSelected" },
-        { name: 'Salad', id: '2', selected: "notSelected" },
-      ];
-      StorageHub.setData('meals', meals)
-      const page = new MealListPage();
-      page.pageWillLoad();
-      expect(page.render()).toContain('<p class="selectedRecipe">');
-    });
+    // it('should have Pizza selected', () => {
+    //   const meals = [
+    //     { name: 'Pizza', id: '0', selected: "selected" },
+    //     { name: 'Pasta', id: '1', selected: "notSelected" },
+    //     { name: 'Salad', id: '2', selected: "notSelected" },
+    //   ];
+    //   StorageHub.setData('meals', meals)
+    //   const page = new MealListPage();
+    //   page.pageWillLoad();
+    //   expect(page.render()).toContain('<p class="selectedRecipe">');
+    // });
 
     // TODO - working code
     // it('Right button click should toggle css class first and second items', () => {

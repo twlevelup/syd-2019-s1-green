@@ -8,7 +8,7 @@ class DeliveryPage extends BasePage {
     this.navigate('/');
   }
   leftButtonEvent() {
-    this.navigate("mealList");
+    this.navigate("timeSelection");
   }
 
 }

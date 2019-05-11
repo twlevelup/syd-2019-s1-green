@@ -46,12 +46,12 @@ describe("MealQuantity", () => {
   });
 
    describe('#faceButtonEvent', () => {
-    it('goes to previous page', () => {
+    it('goes to the meal selection page', () => {
       const page = new MealQuantity();
       spyOn(page, 'navigate');
 
       page.faceButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('delivery');
+      expect(page.navigate).toHaveBeenCalledWith('timeSelection');
     });
   });
 });
