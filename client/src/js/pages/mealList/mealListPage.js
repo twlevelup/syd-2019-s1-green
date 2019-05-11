@@ -13,7 +13,7 @@ class MealListPage extends BasePage {
   }
 
   faceButtonEvent(){
-    this.navigate('delivery');
+    this.navigate('mealQuantity');
   }
 
   pageWillLoad() {

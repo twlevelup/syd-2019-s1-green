@@ -7,6 +7,9 @@ class DeliveryPage extends BasePage {
   rightButtonEvent() {
     this.navigate('/');
   }
+  leftButtonEvent() {
+    this.navigate("mealList");
+  }
 
 }
 

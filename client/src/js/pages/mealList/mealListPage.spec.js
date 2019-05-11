@@ -42,7 +42,7 @@ describe('The Meal list Page', () => {
       StorageHub.setData('meals', meals)
       const page = new MealListPage();
       page.pageWillLoad();
-      expect(page.render()).toContain('<li class=selected>');
+      expect(page.render()).toContain('<p class="selectedRecipe">');
     });
 
     // TODO - working code
@@ -82,12 +82,12 @@ describe('The Meal list Page', () => {
   });
 
   describe('#faceButtonEvent', () => {
-    it('goes to delivery page', () => {
+    it('goes to quantity page', () => {
       const page = new MealListPage();
       spyOn(page, 'navigate');
 
       page.faceButtonEvent();
-      expect(page.navigate).toHaveBeenCalledWith('delivery');
+      expect(page.navigate).toHaveBeenCalledWith('mealQuantity');
     });
   });
 

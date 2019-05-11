@@ -10,12 +10,12 @@ const GroceryDeliveryDetails = require('./pages/groceryDelivery/groceryDeliveryD
 const DeliveryPage = require('./pages/deliveryPage/deliveryPage');
 const RecipeDetails = require('./pages/foodRecipe/recipeDetails/recipeDetails');
 const FoodQuantity = require('./pages/foodQuantity/FoodQuantity');
+const MealQuantity = require('./pages/mealQuantity/mealQuantity');
 
 
 
 module.exports = {
   '/': HomePage,
-//   'contacts': ContactsPage,
   'mealList': MealListPage,
   'team': TeamPage,
   '404': FourOhFour,
@@ -25,5 +25,6 @@ module.exports = {
   'groceryDeliveryDetails': GroceryDeliveryDetails,
   'delivery': DeliveryPage,
   'recipeDetails': RecipeDetails,
-  'foodQuantity': FoodQuantity
+  'foodQuantity': FoodQuantity,
+  'mealQuantity' : MealQuantity
 };
