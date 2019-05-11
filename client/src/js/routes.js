@@ -12,7 +12,12 @@ const RecipeDetails = require('./pages/foodRecipe/recipeDetails/recipeDetails');
 const FoodQuantity = require('./pages/foodQuantity/FoodQuantity');
 const MealQuantity = require('./pages/mealQuantity/mealQuantity');
 const NutritionTracker = require('./pages/nutritionTracker/nutritionTracker');
+<<<<<<< HEAD
 const TimeSelection = require('./pages/timeSelection/timeSelection');
+=======
+const CalorieCounter = require('./pages/nutritionTracker/calorieCounter/calorieCounter');
+
+>>>>>>> [James/Lainmar]Add calorie count
 
 
 
@@ -30,5 +35,9 @@ module.exports = {
   'foodQuantity': FoodQuantity,
   'mealQuantity' : MealQuantity,
   'nutritionTracker': NutritionTracker,
+<<<<<<< HEAD
   'timeSelection' : TimeSelection
+=======
+  'calorieCounter': CalorieCounter,
+>>>>>>> [James/Lainmar]Add calorie count
 };

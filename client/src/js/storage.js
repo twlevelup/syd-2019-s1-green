@@ -33,3 +33,6 @@ StorageHub.setData("timeFrames", [
     time: "6 PM - 10 PM"
   }
 ]);
+
+StorageHub.setData('currCalorie', 0)
+StorageHub.setData('addCalorie', 0)

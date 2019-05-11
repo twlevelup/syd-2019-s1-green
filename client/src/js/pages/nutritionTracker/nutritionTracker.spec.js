@@ -35,4 +35,14 @@ describe('Nutrition Tracker Page', () => {
     });
   });
 
+    describe('#faceButtonEvent', () => {
+      it('goes to calorie counter page', () => {
+       const page = new NutritionTracker();
+       spyOn(page, 'navigate');
+
+      page.faceButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith('calorieCounter');
+    });
+  });
+
   });

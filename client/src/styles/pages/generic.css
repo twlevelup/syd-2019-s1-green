@@ -115,22 +115,88 @@
   transform: translate(-50%, -50%)
 }
 
+<<<<<<< HEAD
 .basicText{
+=======
+.selectedBundle {
+  font-size: 14px;
+  color: #a8e2aa;
+}
+
+.calorieTargetText{
+>>>>>>> [James/Lainmar]Add calorie count
   font-size: 16px;
   color: #fff;
   position: absolute;
-  top: 45%;
+  top: 25%;
   left: 18%;
   font-weight: bold;
   text-align: center;
 }
 
-.calorie {
+.calorieCurrentText{
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 55%;
+  left: 7%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.calorieTarget {
   font-size: 22px;
   color: #ffa500;
   position: absolute;
-  top: 55%;
+  top: 35%;
   left: 40%;
   font-weight: bold;
   text-align: center;
 }
+<<<<<<< HEAD
+=======
+
+.calorieCurrent {
+  font-size: 22px;
+  color: #ffa500;
+  position: absolute;
+  top: 65%;
+  left: 45%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.calorieQuantity {
+  font-size: 22px;
+  color: #fff;
+  position: absolute;
+  top: 30%;
+  left: 20%;
+  font-weight: bold;
+  text-align: center;
+}
+
+#calorieQuantity {
+  font-size: 22px;
+  color: #ffa500;
+  position: absolute;
+  top: 40%;
+  left: 20%;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+.calorieCurrentQuantity {
+  font-size: 22px;
+  color: #ffa500;
+  position: absolute;
+  top: 45%;
+  left: 35%;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+>>>>>>> [James/Lainmar]Add calorie count
