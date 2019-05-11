@@ -88,23 +88,19 @@
 }
 
 /* TODO standard styling of list items and selected list item */
-li {
-  padding: 2px 0px;
-  border-bottom: 1px solid #c8e6c9;
-}
 
-li:last-child {
-  border: none;
-}
-
-.selectedRecipe {
+.selected {
+  padding: 5px 20px;
+  width: 180px;
   font-style: normal;
   font-size: 15px;
   text-align: center;
-  /* height: 250px;
-  line-height: 200px; */
-  margin: 85px 20px;
   border: 1px solid #c8e6c9;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%)
 }
 
 .selectedBundle {

@@ -20,7 +20,7 @@ describe('Food Recipe Page', () => {
 
     it('should contain selected recipe styling', () => {
       const page = new FoodRecipe();
-      expect(page.render()).toContain('selectedRecipe');
+      expect(page.render()).toContain('selected');
     });
   });
 

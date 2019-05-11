@@ -2,29 +2,34 @@ const GroceryDeliveryDetails = require('./groceryDeliveryDetails');
 
 describe('Delivery Details Page', () => {
   let watchFace;
+  let page;
+
   beforeEach(() => {
     document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
     watchFace = document.getElementById('watch-face');
+    page = new GroceryDeliveryDetails();
   });
 
   describe('#render', () => {
     it('should contain the correct text', () => {
-      const page = new GroceryDeliveryDetails();
       expect(page.render()).toContain('Delivery Details');
     });
   });
 
 
-//   describe('#bottomButtonEvent', () => {
-//     it('scrolls page down', () => {
+  describe("#buttons", () => {
+    it("right button goes to root page", () => {
+      spyOn(page, "navigate");
 
-//       const page = new GroceryDeliveryDetails({ watchFace });
+      page.rightButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith("/");
+    });
 
-//       page.bottomButtonEvent();
+    it("left button goes to GroceryDelivery page", () => {
+      spyOn(page, "navigate");
 
-//       expect(watchFace.scrollTop).toEqual(40);
-
-//    });
-
-//   });
+      page.leftButtonEvent();
+      expect(page.navigate).toHaveBeenCalledWith("groceryDelivery");
+    });
   });
+});
