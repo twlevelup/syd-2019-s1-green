@@ -1,4 +1,13 @@
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <i id="navRightIcon" class="navIcon fas fa-home"></i>
 <i id="navLeftIcon" class="navIcon fas fa-undo"></i>
-<div class="delivery">You have placed your order.</div>
+<div class="delivery">You have placed your order.
+{{#each timeFrames}}
+    {{#if this.selected}}
+    <p>
+        For
+        <br>{{this.time}}
+    </p>
+    {{/if}}
+{{/each}}
+</div>
