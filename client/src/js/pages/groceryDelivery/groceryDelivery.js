@@ -5,8 +5,6 @@ class GroceryDelivery extends BasePage {
   template = require("./groceryDelivery.hbs");
 
   pageWillLoad() {
-    console.log(" *** GroceryDelivery Page Will Load ***");
-
     if (StorageHub.getData("loaded") != true) {
       StorageHub.setData("selectedBundle", 0);
       StorageHub.setData("loaded", true);
@@ -34,17 +32,29 @@ class GroceryDelivery extends BasePage {
   }
 
   bottomButtonEvent() {
-    if (this.selectedBundle < this.groceryBundle.length - 1) {
-      StorageHub.setData("selectedBundle", this.selectedBundle + 1);
+    let selectedBundle = StorageHub.getData("selectedBundle");
+
+    if (selectedBundle < this.groceryBundle.length - 1) {
+      StorageHub.setData("selectedBundle", selectedBundle + 1);
     } else {
       StorageHub.setData("selectedBundle", 0);
     }
-    this.navigate("groceryDelivery", true);
 
-    console.log(this.selectedBundle);
-    console.log(StorageHub.getData("selectedBundle"));
-    console.log(this.groceryBundle);
-    console.log(StorageHub.getData("groceryBundle"));
+    this.updategroceryBundleList()
+  }
+
+  updategroceryBundleList() {
+    let selectedBundle = StorageHub.getData("selectedBundle");
+    let groceryBundleList = document.getElementById('groceryBundleList')
+    let bundles = groceryBundleList.getElementsByTagName('li')
+
+    if (selectedBundle == 0) {
+      bundles[this.groceryBundle.length - 1].classList.remove('selectedItem')
+      bundles[selectedBundle].classList.add('selectedItem')
+    } else {
+      bundles[selectedBundle - 1].classList.remove('selectedItem')
+      bundles[selectedBundle].classList.add('selectedItem')
+    }
   }
 }
 

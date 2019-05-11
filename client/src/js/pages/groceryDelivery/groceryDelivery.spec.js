@@ -5,6 +5,16 @@ describe("groceryDelivery", () => {
   let watchFace;
   let page;
 
+  const template = function () {
+    return `
+            <ul id="groceryBundleList">
+              <li class="selectionItems selectedItem">Healthy Dinner Pack: bag of salad, two tomatoes, one cucumber, three beef steaks</li>
+              <li class="selectionItems">Fun time Dinner Pack: bag of chips, two burgers, one coke, three ice-creams</li>
+              <li class="selectionItems">Vegetarian Dinner Pack: purple cabbage, spinach, sweet potatoes, tofu</li>
+            </ul>
+          `
+  }
+
   beforeEach(() => {
     document.body.innerHTML = `<div id='watch-face' style='height: 100px; width: 100px;'></div>`;
     watchFace = document.getElementById("watch-face");
@@ -23,7 +33,7 @@ describe("groceryDelivery", () => {
     it("should render navigation", () => {
       // expect(page.render()).toContain("navTopIcon");
       expect(page.render()).toContain("navRightIcon");
-      // expect(page.render()).toContain("navBottomIcon");
+      expect(page.render()).toContain("navBottomIcon");
       expect(page.render()).toContain("navLeftIcon");
     });
   });
@@ -37,7 +47,7 @@ describe("groceryDelivery", () => {
 
     it("should initialize bundles and select first bundle by default", () => {
       page.pageWillLoad();
-      expect(page.render()).toContain('<li class="selected');
+      expect(page.render()).toContain('<li class="selectionItems selectedItem"');
     });
   });
 
@@ -66,12 +76,6 @@ describe("groceryDelivery", () => {
     //   spyOn(StorageHub, "getData");
     //   page.bottomButtonEvent();
     //   expect(StorageHub.getData("selectedBundle")).toEqual(1);
-    // });
-
-    // it("top button selects next item above", () => {
-    //   spyOn(StorageHub, "getData");
-    //   page.bottomButtonEvent();
-    //   expect(StorageHub.getData("selectedBundle")).toEqual(2);
     // });
   });
 });
