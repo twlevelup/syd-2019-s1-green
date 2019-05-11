@@ -11,6 +11,8 @@ const DeliveryPage = require('./pages/deliveryPage/deliveryPage');
 const RecipeDetails = require('./pages/foodRecipe/recipeDetails/recipeDetails');
 const FoodQuantity = require('./pages/foodQuantity/FoodQuantity');
 const MealQuantity = require('./pages/mealQuantity/mealQuantity');
+const NutritionTracker = require('./pages/nutritionTracker/nutritionTracker');
+
 
 
 
@@ -26,5 +28,6 @@ module.exports = {
   'delivery': DeliveryPage,
   'recipeDetails': RecipeDetails,
   'foodQuantity': FoodQuantity,
-  'mealQuantity' : MealQuantity
+  'mealQuantity' : MealQuantity,
+  'nutritionTracker': NutritionTracker,
 };

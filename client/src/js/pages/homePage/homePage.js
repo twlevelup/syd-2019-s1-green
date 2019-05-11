@@ -53,6 +53,10 @@ class HomePage extends BasePage {
     this.navigate("groceryDelivery");
   }
 
+  bottomButtonEvent() {
+    this.navigate("nutritionTracker");
+  }
+
   // TODO: Remove with? an info page?
   // bottomButtonEvent() {
   //   this.watchFace.scrollTop += 40;

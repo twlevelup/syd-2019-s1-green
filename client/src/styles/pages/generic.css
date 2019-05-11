@@ -1,3 +1,7 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Increase watch-face size */
 #watch #watch-face {
   top: 15px;
@@ -107,3 +111,25 @@
   font-size: 14px;
   color: #a8e2aa;
 }
+
+.basicText{
+  font-size: 16px;
+  color: #fff;
+  position: absolute;
+  top: 45%;
+  left: 18%;
+  font-weight: bold;
+  text-align: center;
+}
+
+.calorie {
+  font-size: 22px;
+  color: #ffa500;
+  position: absolute;
+  top: 55%;
+  left: 40%;
+  font-weight: bold;
+  text-align: center;
+}
+
+
